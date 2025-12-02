@@ -1,0 +1,57 @@
+.venv/
+__pycache__/
+*.pyc
+
+logs/
+nba_cache.sqlite
+
+data/
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# Data files (too large for git)
+data/
+*.csv
+*.sqlite
+
+# Logs
+logs/
+*.log
+
+# Checkpoints and temporary files
+checkpoint.json
+missing_game_ids.txt
+# Note: requirements.txt is NOT ignored (needed for setup)
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup directories
+data_backup_*/
+
+# Tableau files (can be regenerated)
+tableau/*.csv
+tableau/*.twb
+
+# Cache
+nba_cache.sqlite
+*.db
+

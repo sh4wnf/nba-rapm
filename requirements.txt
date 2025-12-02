@@ -1,0 +1,8 @@
+nba_api
+pandas
+numpy
+scipy
+requests
+requests-cache
+streamlit
+plotly
