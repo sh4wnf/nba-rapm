@@ -9,7 +9,7 @@ from src.rapm_model import load_rapm_results_with_stats
 from src import config
 
 
-""" basic page + layout stuff """
+# basic page + layout stuff
 
 st.set_page_config(
     page_title="NBA Player Impact Dashboard",
@@ -139,7 +139,7 @@ st.title("NBA Player Impact Dashboard (RAPM)")
 st.markdown("**Regularized Adjusted Plus-Minus** - Player impact ratings from the 2024-25 season")
 st.caption(f"Box-score stats shown below are pulled for season: {NBA_API_SEASON}")
 
-""" summary stats for current filter state """
+# summary stats for current filter state 
 
 summary_col1, summary_col2, summary_col3, summary_col4 = st.columns([1, 1, 2, 1])
 

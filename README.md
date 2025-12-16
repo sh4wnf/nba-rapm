@@ -1,21 +1,3 @@
-<!--
-CS 4375 Final Project
-
-Name: Shawn Francis
-NetID: saf210007
-Class: CS 4375.001
-Professor: Anurag Nagar
-Days Used: 2
-Turned In: 12/2/2025
-
-## NBA RAPM Project README
-
-Note: It is enough to use the provided data and run
-the dashboard, but the TA can re-run the full pipeline if they 
-choose, however fair warning, ingesting the data will take a good 
-amount of time.
--->
-
 This project contains a Python implementation of an NBA Regularized
 Adjusted Plus-Minus (RAPM) pipeline and a Streamlit dashboard for
 exploring player impact based on play-by-play data.
@@ -37,11 +19,10 @@ run: pip install -r requirements.txt
 
 ### To get the dataset:
 
-1. Go to the public dataset link provided in the project submission
-(the separate GitHub repository that contains the data
-files).
+1. Go to the public dataset repository:
+   https://github.com/sh4wnf/nba-rapm-data
 
-2. Download the data and copy the "data" and "results" folders so
+2. Download or clone that repository, then copy the "data" and "results" folders so
 that they are directly inside the project folder. The final layout
 should look like:
 
@@ -59,6 +40,13 @@ NBA-Player-Impact/
     rapm_outputs.csv
     experiment_logs/log.json (if included)
 
+### To run the Streamlit dashboard:
+
+1. Make sure results/rapm_outputs.csv exists (either from the
+downloaded data or after running the pipeline).
+
+2. In the activated virtual environment, from the project folder,
+run: streamlit run app.py
 
 ### To run the RAPM pipeline:
 
@@ -69,13 +57,7 @@ This runs the program assuming the preprocessed data files are already in
 data/processed_stints and data/matrices.
 
 
-### To run the Streamlit dashboard:
 
-1. Make sure results/rapm_outputs.csv exists (either from the
-downloaded data or after running the pipeline).
-
-2. In the activated virtual environment, from the project folder,
-run: streamlit run app.py
 
 
 

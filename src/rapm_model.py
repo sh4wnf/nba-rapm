@@ -363,7 +363,7 @@ def combine_rapm(ora: np.ndarray, dra: np.ndarray) -> np.ndarray:
 
 
 # computes rapm by fitting the joint orapm + drapm model while also logging
-def compute_rapm( @compute
+def compute_rapm(
     X_off: csr_matrix,
     y: np.ndarray,
     X_def: csr_matrix,
