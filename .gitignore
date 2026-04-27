@@ -23,6 +23,11 @@ env/
 data/
 *.csv
 *.sqlite
+# Keep repo runnable with a tiny demo artifact + docs
+!results/
+results/*
+!results/README.md
+!results/rapm_demo.csv
 
 # Logs
 logs/

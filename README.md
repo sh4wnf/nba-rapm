@@ -40,6 +40,14 @@ NBA-Player-Impact/
     rapm_outputs.csv
     experiment_logs/log.json (if included)
 
+### Demo mode (no full dataset required)
+
+If `results/rapm_outputs.csv` is not present, the app automatically falls back to
+`results/rapm_demo.csv` so the dashboard can still run for a lightweight demo.
+
+This is useful for portfolio/recruiter sharing and Streamlit hosting when you do not
+want to commit large data artifacts.
+
 ### To run the Streamlit dashboard:
 
 1. Make sure results/rapm_outputs.csv exists (either from the

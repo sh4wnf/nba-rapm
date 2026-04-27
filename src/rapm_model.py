@@ -946,8 +946,25 @@ def print_rapm_summary(rapm_df: pd.DataFrame, min_stints: int = 0, top_n: int = 
  # loader for the streamlit app to get clean rapm results
 def load_rapm_results_with_stats(csv_path: Path | None = None) -> pd.DataFrame:
     if csv_path is None:
-        csv_path = config.RAPM_OUTPUTS_CSV
-    df = pd.read_csv(csv_path)
+        primary_path = config.RAPM_OUTPUTS_CSV
+    else:
+        primary_path = Path(csv_path)
+
+    demo_path = config.RESULTS_DIR / "rapm_demo.csv"
+
+    if primary_path.exists():
+        df = pd.read_csv(primary_path)
+    elif demo_path.exists():
+        logger.warning(
+            "Primary RAPM results file not found at %s. Falling back to demo data at %s.",
+            primary_path,
+            demo_path,
+        )
+        df = pd.read_csv(demo_path)
+    else:
+        raise FileNotFoundError(
+            f"Missing RAPM data file. Expected '{primary_path}' or demo fallback '{demo_path}'."
+        )
 
     numeric_cols = [
         "orapm",
