@@ -28,6 +28,7 @@ data/
 results/*
 !results/README.md
 !results/rapm_demo.csv
+!results/rapm_outputs.csv
 
 # Logs
 logs/
